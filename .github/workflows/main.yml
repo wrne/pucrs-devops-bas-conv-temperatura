@@ -1,0 +1,27 @@
+
+name: CI
+
+# Define os triggers que vão disparar o Action
+on: 
+  push: 
+    branches: [main]
+  # pull_request:
+  #  branches: [main]
+
+  # Habilita o disparo manual pelo Actions tab
+  # workflow_dispatch:
+
+jobs:
+  # Esse workflow possui um unico job chamado "CI"
+  CI:
+
+    runs-on: ubuntu-lastest
+    
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup do NodeJS
+        uses: actions/setup-node@v3.0.0
+        with:
+          node-version: 16.3.2
+  
