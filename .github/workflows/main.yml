@@ -9,7 +9,7 @@ on:
   #  branches: [main]
 
   # Habilita o disparo manual pelo Actions tab
-  # workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   # Esse workflow possui um unico job chamado "CI"
@@ -18,10 +18,15 @@ jobs:
     runs-on: ubuntu-lastest
     
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       - name: Setup do NodeJS
         uses: actions/setup-node@v3.0.0
         with:
           node-version: 16.3.2
-  
+      - name: Instalação do Mocha e pacote de dependencia para teste
+        run: |
+          cs src;
+          npm install -g mocha;
+          npm install
