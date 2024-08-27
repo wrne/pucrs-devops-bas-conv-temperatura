@@ -28,7 +28,7 @@ jobs:
           
       - name: Instalação do Mocha e pacote de dependencia para teste
         run: |
-          cs src;
+          cd src;
           npm install -g mocha;
           npm install
           
