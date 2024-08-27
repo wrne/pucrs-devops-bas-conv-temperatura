@@ -22,9 +22,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup do NodeJS
-        uses: actions/setup-node@v3.0.0
+        uses: actions/setup-node@v4.0.3
         with:
-          node-version: 16.3.2
+          node-version: 16.13.2
           
       - name: Instalação do Mocha e pacote de dependencia para teste
         run: |
